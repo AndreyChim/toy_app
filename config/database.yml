@@ -20,13 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-#production:
- # <<: *default
-  #database: db/production.sqlite3
-
-
 production:
-  adapter: postgresql
+  <<: *default
+  database: db/production.sqlite3
+
+
+#production:
+ # adapter: postgresql
  # database: db/production.sqlite3
   #encoding: utf8
   #database: project_production
