@@ -8,7 +8,7 @@ gem 'rails', '~> 6.1.4'
 
 # Use pg as the database for Active Record
 group :development, :test do
-  gem 'pg', '~> 1.4'
+  gem 'pg', '~> 1.2.3'
     end
 
 # Use Puma as the app server
