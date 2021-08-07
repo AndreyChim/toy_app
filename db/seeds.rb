@@ -8,5 +8,5 @@
 
 
 2.times do |i|
-  Users.create(name: "User ##{i}", description: "A user #{i}")
+  User.create(name: "User ##{i}", description: "A user #{i}")
 end
