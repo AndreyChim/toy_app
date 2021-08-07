@@ -11,12 +11,12 @@ test:
   database: toy_app_test
 
 production:
- url: <%= ENV['DATABASE_URL'] %>
+ #url: <%= ENV['DATABASE_URL'] %>
  
    <<: *default
    adapter: postgresql
-#   database: db/production.sqlite3
- database: toy_app_production
+   database: db/production.sqlite3
+# database: toy_app_production
   #username: toy_app
   #password: <%= ENV['TOY_APP_DATABASE_PASSWORD'] %>
 
