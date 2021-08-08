@@ -1,22 +1,57 @@
+#default: &default
+ # adapter: sqlite3
+ # adapter: postgresql
+  #pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+#development:
+ # <<: *default
+  #database: db/development.sqlite3
+  #database: 127.0.0.1:5432/db1
+  #database: postgres:///db%2Fdb1
+
+#test:
+ # <<: *default
+  #database: toy_app_test
+
+#production:
+ #url: <%= ENV['DATABASE_URL'] %>
+ 
+  # <<: *default
+   #adapter: postgresql
+ #  database: db/production.sqlite3
+# database: toy_app_production
+  #username: toy_app
+  #password: <%= ENV['TOY_APP_DATABASE_PASSWORD'] %>
+
+################################################################
+
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  #username: <%= ENV['POSTGRES_USER'] %>
+  #password: <%= ENV['POSTGRES_PASSWORD'] %>
+  #host: <%= ENV['POSTGRES_HOST'] %>
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: db1
+  username: 'postgres'
+  password: '123'
+  host: localhost
+  port: 5432
 
 test:
   <<: *default
   database: toy_app_test
 
 production:
- #url: <%= ENV['DATABASE_URL'] %>
- 
-   <<: *default
-   adapter: postgresql
-   database: db/production.sqlite3
-# database: toy_app_production
-  username: toy_app
-  password: <%= ENV['TOY_APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  url: <%= ENV['DATABASE_URL'] %>
+
+
+
+  
 
