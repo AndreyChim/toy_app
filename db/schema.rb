@@ -12,18 +12,21 @@
 
 ActiveRecord::Schema.define(version: 2021_07_17_084134) do
 
-  create_table "microposts", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "microposts", id: :bigint, default: nil, force: :cascade do |t|
     t.text "content"
-    t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.text "created_at", null: false
+    t.text "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table "users", id: :bigint, default: nil, force: :cascade do |t|
+    t.text "name"
+    t.text "email"
+    t.text "created_at", null: false
+    t.text "updated_at", null: false
   end
 
 end
