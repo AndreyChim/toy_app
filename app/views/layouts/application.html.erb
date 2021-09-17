@@ -11,17 +11,17 @@
   </head>
 
   <body>
-  <%# <p><a href="/admins/sign_in">Sign In</a> | <a href="/admins/sign_out" data-method="delete">Sign Out</a></p> %>
+   <p><a href="/admins/sign_in">Sign In</a> | <a href="/admins/sign_out" data-method="delete">Sign Out</a></p> 
   <%# Заменим жёстко прописанные ссылки, на ссылки с именованными маршрутами: %>
   <%#<p><%= link_to "Sign In", new_user_session_path  | <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 
   <%# Далее, выведем имя пользователя при авторизации, и уберём Sign Out ссылку, когда мы не авторизованы.%>
 
-<% if user_signed_in? %>
-  Hello, <%= current_user.email %> | <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign In", new_user_session_path %>
-<% end %>
+<%# if user_signed_in? %>
+  <%#Hello, <%= current_user.email %> | <%#= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<%# else %>
+  <%#= link_to "Sign In", new_user_session_path %>
+<%# end %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
