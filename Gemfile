@@ -5,7 +5,7 @@ ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
-
+gem 'rake', '~>13.0.6'
 # Use pg as the database for Active Record
 #group :development, :test do
   #gem 'pg', '~> 1.2.3'
