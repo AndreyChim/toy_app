@@ -12,11 +12,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # GET /users/1 or /users/1.json
-  def show
-  end
+   # GET /users/1 or /users/1.json
+   def show
+    #@user = User.find(params[:id])
+    @user = current_admin
+   end
 
-  # GET /users/new
+   # GET /users/new
   def new
     @user = User.new
   end
