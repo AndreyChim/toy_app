@@ -18,7 +18,7 @@
   <%# Далее, выведем имя пользователя при авторизации, и уберём Sign Out ссылку, когда мы не авторизованы.%>
 
 <% if admin_signed_in? %>
-  Hello, <%= current_admin.username %> | <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
+  Hello, <%= current_admin.email %> | <%= link_to "Sign Out", destroy_admin_session_path, method: :delete %>
 <% else %>
   <%= link_to "Sign In", new_admin_session_path %>
 <% end %>
