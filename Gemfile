@@ -15,12 +15,29 @@ gem 'rake', '~>13.0.6'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpack  
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
+
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 4.2.0'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 5.0.0'
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer',  platforms: :ruby
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.11.2'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 2.2.0',          group: :doc
+
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
