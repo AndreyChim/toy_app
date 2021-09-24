@@ -23,7 +23,7 @@
               </button>
               <%= link_to "ToyApp", home_index_path, class: "navbar-brand" %>
               <% if admin_signed_in? %>
-                <% welcome_adminname = 'Hi, ' + current_admin.adminname + '!' %> 
+                <% welcome_adminname = 'Hi, ' + current_admin.adminname.to_s + '!' %> 
                               <div class="visible-xs-block" style="margin: 15px 75px" align="right">
                   <%= welcome_adminname %>
                 </div>
