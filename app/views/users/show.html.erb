@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--p id="notice"><%= notice %></p>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -10,4 +10,51 @@
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path %-->
+
+
+
+<h3><%= @user.name %></h3>
+<p>
+	<%= @user.email %>
+	<br />
+	<br />
+	<i>Create <%= @user.author %> at <%= @user.created_at %></i>
+	<hr/>
+</p>
+
+<!--h4>Comments</h4>
+
+<% @article.comments.each do |comment| %>
+
+	<p>
+		<%= comment.body %>
+		<br />
+		<br />
+		<i>Said <%= comment.author %> at <%= comment.created_at %></i>
+		<hr/>
+	</p>
+
+<% end %-->
+
+<% if admin_signed_in? %>
+	<h4>Add comment</h4>
+
+	<p>
+		<!--%= form_for([@user, @user.mments.build]) do |f| %-->
+    <%= form_for([@user]) do |f| %>
+
+			<p>
+				<%= f.text_area :body, class: "form-control", rows: "4", style: "width: 300px" %>
+			</p>
+
+			<p>
+				<%= f.submit"Add", class: "btn btn-success" %>
+			</p>
+		<% end %>
+	</p-->
+
+<% else %>
+	<i>Please <%= link_to "sign in", new_admin_session_path %> or <%= link_to "register", new_admin_registration_path %> to leave comments.</i>
+<% end %>
+<hr/>
