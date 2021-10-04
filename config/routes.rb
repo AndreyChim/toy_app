@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   #  post 'signin' => 'devise/sessions#create', :as => :admin_session
   #  delete 'signout' => 'devise/sessions#destroy', :as => :destroy_admin_session
   #end
-  root to: "users#index"
+  #root to: "users#index"
+  root to: "home#index"
   #root "application#index"
 
   get 'home/index'
